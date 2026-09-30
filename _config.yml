@@ -1,0 +1,3 @@
+# The site is plain HTML, so this file only stops README.md being published.
+exclude:
+  - README.md
