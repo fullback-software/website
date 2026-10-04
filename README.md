@@ -30,6 +30,7 @@ The Fullback Software website, hosted free on GitHub Pages from this public repo
 - `_config.yml`: stops this README being published as a page.
 - `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`: the navy icon from the Fullback logo kit.
 - `assets/img`: logos from the logo kit, the pitch illustration and the social preview image.
+- `assets/img/screens`: pictures of the app with a made-up team, on the Match Manager page. They're drawn from an app build by `scripts/store-scenes.mjs` in the match-manager repo, the same way as the App Store screenshots, then cropped and saved as WebP at two widths.
 - `assets/fonts`: Poppins, subset for the web, under the SIL Open Font License (`OFL.txt`).
 
 ## DNS at VentraIP

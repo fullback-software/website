@@ -639,6 +639,99 @@ a:hover {
   margin: 0 0 6px;
 }
 
+/* Match Manager: how a match runs, and the iPad */
+
+.screen {
+  width: 100%;
+  border-radius: 12% / 5.9%;
+  background: var(--navy);
+  box-shadow: 0 1px 2px rgba(14, 26, 43, 0.12), 0 12px 32px rgba(14, 26, 43, 0.16);
+}
+
+.tour {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.tour li {
+  counter-increment: step;
+}
+
+.tour .screen {
+  margin-bottom: 20px;
+}
+
+.tour h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-weight: 700;
+  margin-bottom: 0.4em;
+}
+
+.tour h3::before {
+  content: counter(step);
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--on-navy);
+  font-size: 0.8125rem;
+  line-height: 1;
+}
+
+.tour p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.ipad {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
+  align-items: center;
+  gap: 56px;
+}
+
+.ipad p {
+  color: var(--muted);
+  max-width: 30em;
+  margin: 0;
+}
+
+.screen-ipad {
+  border-radius: 2.4% / 1.83%;
+}
+
+/* Narrower screens: the steps scroll sideways */
+
+@media (max-width: 1000px) {
+  .tour {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 260px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 20px;
+    margin-inline: -20px;
+    padding: 4px 20px 24px;
+  }
+
+  .tour li {
+    scroll-snap-align: start;
+  }
+}
+
 /* Small screens */
 
 @media (max-width: 760px) {
@@ -675,8 +768,13 @@ a:hover {
 
   .features,
   .pair,
-  .contact {
+  .contact,
+  .ipad {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ipad {
+    gap: 28px;
   }
 
   .pair {
@@ -716,6 +814,10 @@ a:hover {
 
   .faq details {
     padding: 0 18px;
+  }
+
+  .tour {
+    grid-auto-columns: 68%;
   }
 }
 
