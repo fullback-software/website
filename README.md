@@ -29,8 +29,8 @@ The Fullback Software website, hosted free on GitHub Pages from this public repo
 - `CNAME`: the custom domain, fullbacksoftware.com.au.
 - `_config.yml`: stops this README being published as a page.
 - `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`: the navy icon from the Fullback logo kit.
-- `assets/img`: logos from the logo kit, the pitch illustration and the social preview image.
-- `assets/img/screens`: pictures of the app with a made-up team, on the Match Manager page. They're drawn from an app build by `scripts/store-scenes.mjs` in the match-manager repo, the same way as the App Store screenshots, then cropped and saved as WebP at two widths.
+- `assets/img`: logos from the logo kit, Match Manager's app icon (`match-manager-icon-240.png` and `-480.png`, from the iOS project's icon with its corners rounded) and the social preview image. The four small pitches on the Match Manager page are drawn in the page itself, as SVG.
+- `assets/img/screens`: pictures of the app with a made-up team, on the Match Manager page. They're drawn from an app build by `scripts/store-scenes.mjs` in the match-manager repo, the same way as the App Store screenshots, then cropped and saved as WebP at two widths. The current ones come from build 20261013.4 (TestFlight build 24), in the flat brand colours.
 - `assets/fonts`: Poppins, subset for the web, under the SIL Open Font License (`OFL.txt`).
 
 ## DNS at VentraIP
